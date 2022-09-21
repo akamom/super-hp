@@ -1,8 +1,9 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import "./all.sass";
+import NavbarImpl from "../components/Navbar";
+// import "./all.sass";
+import "./style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
 
@@ -47,10 +48,14 @@ const TemplateWrapper = ({ children }) => {
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
+        <body
+          data-bs-spy="scroll"
+          data-bs-target="#navigation"
+          data-bs-offset="0"
+          tabindex="0"
+        />
       </Helmet>
-      <Navbar />
       <div>{children}</div>
-      <Footer />
     </div>
   );
 };
