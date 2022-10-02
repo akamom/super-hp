@@ -1,8 +1,5 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
-import Footer from "../components/Footer";
-import NavbarImpl from "../components/Navbar";
-// import "./all.sass";
 import "./style.css";
 import useSiteMetadata from "./SiteMetadata";
 import { withPrefix } from "gatsby";
@@ -36,7 +33,7 @@ const TemplateWrapper = ({ children }) => {
 
         <link
           rel="mask-icon"
-          href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
+          href={`${withPrefix("/")}img/logo_2.svg`}
           color="#ff4400"
         />
         <meta name="theme-color" content="#fff" />
