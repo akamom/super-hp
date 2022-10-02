@@ -9,6 +9,8 @@ import Layout from "../components/Layout";
 import HeroSection from "../components/HeroSection";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import AboutMe from "../components/AboutMe";
+import UnderConstruction from "../components/UnderConstruction";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -22,16 +24,29 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
 
-  return (
-    <div>
-      <Navigation />
-      <HeroSection id="home" />
-      <Blocksection imgAllignment="left" bg="light" id="card1" />
-      <Blocksection imgAllignment="right" bg="dark" id="card2" />
-      <Blocksection imgAllignment="left" bg="light" id="card3" />
-      <Footer />
-    </div>
-  );
+  const realPage = () => {
+    return (
+      <div>
+        <Navigation />
+        <HeroSection id="home" />
+        <AboutMe />
+        <Blocksection imgAllignment="left" bg="dark" id="card1" />
+        <Blocksection imgAllignment="right" bg="light" id="card2" />
+        <Blocksection imgAllignment="left" bg="dark" id="card3" />
+        <Footer />
+      </div>
+    );
+  };
+
+  const underConstruction = () => {
+    return (
+      <div>
+        <UnderConstruction />
+      </div>
+    );
+  };
+
+  return underConstruction();
 };
 
 IndexPageTemplate.propTypes = {
