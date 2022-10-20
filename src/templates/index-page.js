@@ -64,11 +64,22 @@ export const IndexPageTemplate = ({
     );
   };
 
-  console.log(isCMS);
   if (isCMS === undefined || !isCMS) {
     return underConstruction();
   }
   return realPage();
+};
+
+IndexPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+  title: PropTypes.string,
+  heading: PropTypes.string,
+  subheading: PropTypes.string,
+  mainpitch: PropTypes.object,
+  description: PropTypes.string,
+  intro: PropTypes.shape({
+    blurbs: PropTypes.array,
+  }),
 };
 
 const IndexPage = ({ data }) => {
@@ -99,52 +110,80 @@ IndexPage.propTypes = {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexPageTemplate {
-    markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
-      frontmatter {
-        aboutme {
-          image
-          textlinks
-          textrechts
-          textunten
+query IndexPageTemplate {
+  markdownRemark(frontmatter: {templateKey: {eq: "index-page"}}) {
+    frontmatter {
+      beratung {
+        title
+        subtitle
+        description
+        image {
+          childrenImageSharp {
+            gatsbyImageData
+          }
         }
-        beratung {
-          description
-          image
-          title
-          subtitle
+      }
+      aboutme {
+        textlinks
+        textrechts
+        textunten
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        consulting {
-          description
-          image
-          subtitle
-          title
+      }
+      coaching {
+        description
+        subtitle
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        herosection {
-          description
-          image
-          subtitle
-          title
+      }
+      consulting {
+        description
+        subtitle
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        supervision {
-          description
-          image
-          subtitle
-          title
+      }
+      herosection {
+        description
+        subtitle
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        training {
-          description
-          image
-          subtitle
-          title
+      }
+      supervision {
+        description
+        subtitle
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
-        coaching {
-          description
-          image
-          subtitle
-          title
+      }
+      training {
+        description
+        subtitle
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
       }
     }
   }
+}
 `;
