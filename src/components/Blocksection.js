@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 
 function Blocksection(props) {
+  const content = props.content;
   return (
     <Card
       className="min-vh-100 mx-auto d-flex align-items-md-center justify-content-md-center border-0 rounded-0"
@@ -16,28 +17,20 @@ function Blocksection(props) {
         <Row className="my-5 mb-100 mt-md-auto">
           <Col
             className={`h-10 d-inline-block col-md-6 col-12 ${
-              props.imgAllignment === "left" ? "order-last order-md-first" : "order-last"
+              props.imgAllignment === "left"
+                ? "order-last order-md-first"
+                : "order-last"
             }`}
           >
-            <Card.Img className="rounded-0 img-thumbnail" src={"/img/blog-index.jpg"} />
+            <Card.Img className="rounded-0 img-thumbnail" src={content.image} />
           </Col>
           <Col className="col-md-6 col-12">
             <Card.Body>
-              <Card.Title>Card Title</Card.Title>
+              <Card.Title>{content.title}</Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Card Subtitle
+                {content.subtitle}
               </Card.Subtitle>
-              <Card.Text>
-                Some quick example text to build on the card title and make up the
-                bulk of the card's content.Some quick example text to build on the
-                card title and make up the bulk of the card's content.Some quick
-                example text to build on the card title and make up the bulk of
-                the card's content.Some quick example text to build on the card
-                title and make up the bulk of the card's content.Some quick
-                example text to build on the card title and make up the bulk of
-                the card's content.Some quick example text to build on the card
-                title and make up the bulk of the card's content.
-              </Card.Text>
+              <Card.Text>{content.description}</Card.Text>
             </Card.Body>
           </Col>
         </Row>

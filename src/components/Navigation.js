@@ -24,13 +24,16 @@ const Navigation = () => {
               <Nav.Link href="#aboutme">About Me</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#card1">Portfolio</Nav.Link>
+              <Nav.Link href="#card1">Coaching</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#card2">Coaching</Nav.Link>
+              <Nav.Link href="#card2">Supervision</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="#card3">Supervision</Nav.Link>
+              <Nav.Link href="#card3">Beratung</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="#card4">Training</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

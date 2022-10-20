@@ -1,5 +1,4 @@
 import { graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
 import PropTypes from "prop-types";
 import React from "react";
 
@@ -14,25 +13,44 @@ import UnderConstruction from "../components/UnderConstruction";
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
+  herosection,
+  aboutme,
+  coaching,
+  supervision,
+  beratung,
+  training,
+  isCMS
 }) => {
-  const heroImage = getImage(image) || image;
-
   const realPage = () => {
     return (
       <div>
         <Navigation />
-        <HeroSection id="home" />
-        <AboutMe />
-        <Blocksection imgAllignment="left" bg="dark" id="card1" />
-        <Blocksection imgAllignment="right" bg="light" id="card2" />
-        <Blocksection imgAllignment="left" bg="dark" id="card3" />
+        <HeroSection id="home" content={herosection} />
+        <AboutMe content={aboutme} />
+        <Blocksection
+          imgAllignment="left"
+          bg="dark"
+          id="card1"
+          content={coaching}
+        />
+        <Blocksection
+          imgAllignment="right"
+          bg="light"
+          id="card2"
+          content={supervision}
+        />
+        <Blocksection
+          imgAllignment="left"
+          bg="dark"
+          id="card3"
+          content={beratung}
+        />
+        <Blocksection
+          imgAllignment="right"
+          bg="light"
+          id="card4"
+          content={training}
+        />
         <Footer />
       </div>
     );
@@ -46,19 +64,11 @@ export const IndexPageTemplate = ({
     );
   };
 
-  return underConstruction();
-};
-
-IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
+  console.log(isCMS);
+  if (isCMS === undefined || !isCMS) {
+    return underConstruction();
+  }
+  return realPage();
 };
 
 const IndexPage = ({ data }) => {
@@ -67,13 +77,12 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
+        herosection={frontmatter.herosection}
+        aboutme={frontmatter.aboutme}
+        coaching={frontmatter.coaching}
+        supervision={frontmatter.supervision}
+        beratung={frontmatter.beratung}
+        training={frontmatter.training}
       />
     </Layout>
   );
@@ -93,30 +102,47 @@ export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
-          }
+        aboutme {
+          image
+          textlinks
+          textrechts
+          textunten
         }
-        heading
-        subheading
-        mainpitch {
+        beratung {
+          description
+          image
           title
-          description
+          subtitle
         }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
-              }
-            }
-            text
-          }
-          heading
+        consulting {
           description
+          image
+          subtitle
+          title
+        }
+        herosection {
+          description
+          image
+          subtitle
+          title
+        }
+        supervision {
+          description
+          image
+          subtitle
+          title
+        }
+        training {
+          description
+          image
+          subtitle
+          title
+        }
+        coaching {
+          description
+          image
+          subtitle
+          title
         }
       }
     }

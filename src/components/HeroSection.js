@@ -2,19 +2,16 @@ import Card from "react-bootstrap/Card";
 import React from "react";
 
 const HeroSection = (props) => {
+  const content = props.content;
   return (
     <Card className="text-center" text="light" id={props.id}>
       <Card.Body className="p-0 position-relative">
-        <Card.Img className="rounded-0" src={"/img/cup-of-coffee.jpg"} />
+        <Card.Img className="rounded-0" src={content.image} />
         <Card.ImgOverlay className="position-absolute top-50 start-50 translate-middle">
-          <Card.Title>Super HP</Card.Title>
-          <Card.Subtitle>Ich bin ein Subtitle.</Card.Subtitle>
+          <Card.Title>{content.title}</Card.Title>
+          <Card.Subtitle>{content.subtitle}</Card.Subtitle>
           <Card.Text className="d-none d-sm-block">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            finibus tortor massa. Praesent fringilla, nisl pharetra semper
-            ornare, metus sapien consectetur mi, eu porttitor massa mauris id
-            mauris. Sed rutrum tincidunt nunc vel iaculis. Pellentesque faucibus
-            cursus orci vitae viverra.
+            {content.description}
           </Card.Text>
         </Card.ImgOverlay>
       </Card.Body>
