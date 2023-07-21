@@ -13,12 +13,12 @@ aboutme:
     Menschen greifen, je nach Kontext, Lebensphase und Problem auf
     unterschiedliche Schichten von emotional und kognitiv wirksamen (Glaubens-)
     systemen zurück. Diese erlauben dann besonders in krisenhaften
-    Lebenssituatio-nen eine Reduzierung von Komplexität, wirken sinnstiftend und
+    Lebenssituationen eine Reduzierung von Komplexität, wirken sinnstiftend und
     Orientierung gebend.
 
     Sie verleiten, weil emotional hoch besetzt, besonders in Krisenzeiten  zu Verallgemeinerungen "wie das Leben wirklich ist". Diese Systeme sind eher auf einer intuitiv-unwillkürlichen Ebene angesiedelt und beeinflussen in einer scheinbar autonomen Weise die eigene Selbstregulation. Sie sind gleich wirksam sowohl in privaten als auch beruflichen (Kollegen, Teams, Organisationen, Führungsrolle) Kontexten.
   textrechts: >-
-    RESSOURCEN- statt PROBLEMORIENTIERUNG
+    RESSOURCEN- statt PROBLEMORIENTIERUNG 
 
     In meiner Arbeit ist dies mit ein Ausgangspunkt, weil darin meist implizit Ansätze für Lösungen verborgen liegen, die lohnen erforscht, erweitert und ausprobiert zu werden. Zusätzlich können sie auch noch die für Veränderungen nötige Energie bereitstellen.
 
@@ -40,24 +40,24 @@ aboutme:
 
     - 15 Jahre Leiter der psycholog. Beratung eines Finanzunternehmens (Beratung, Coaching, Training)
 
-    - 13 Jahre Leiter des Gesundheitsmanagements eine Finanzunternehmens (Gesundheitsschutz, Sicherheit, 
-       physische-, psychologische- und soziale Gesundheit)
-    - Seit 1988 nebenberufliche Tätigkeit als (Lehr-) Supervisor, Organisationsberater, Trainer und Coach im Profit 
-       und Non-Profit-Bereich.
-    - Seit 1989 Lehrtätigkeit an University of Applied Science (Sozialwesen, Health Management)
+    - 13 Jahre Leiter des Gesundheitsmanagements eines Finanzunternehmens (Gesundheitsschutz, Sicherheit, physische-, psychologische- und soziale Gesundheit)
+
+    - Seit 1988 nebenberufliche Tätigkeit als (Lehr-) Supervisor, Organisationsberater, Trainer und Coach im Profit und Non-Profit-Bereich.
+
+    - Seit 1989 Lehrtätigkeit an der University of Applied Science (Sozialwesen, Health Management)
   image: /img/apple-touch-icon.png
 training:
   title: "Training "
-  subtitle: Training von Führungskräften, Gruppen, Teams
+  subtitle: Training von Führungskräften, Gruppen und Teams
   description: >-
     Training für Führungskräfte, Teams, Gruppen und Organisationen zu speziellen
     Themen wie
 
-    Umgang mit Belastungen, Stress, Resilienz, Mobbing, Sucht,  Trauma. Auch im Rahmen von Supervision möglich, zur Bearbeitung spezieller Schwerpunkte.
+    Umgang mit Belastungen, Stress, Resilienz, Burnout, Mobbing, Sucht,  Trauma, Suizidalität. Auch im Rahmen von Supervision, zur Bearbeitung spezieller Schwerpunkte.
   image: /img/home-jumbotron.jpg
 beratung:
   title: Beratung - Counseling
-  subtitle: Beratung - wenn man mal nicht mehr so sicher ist, wie es weitergehen kann.
+  subtitle: Beratung - wenn man mal nicht mehr so sicher ist, wie es weitergehen soll.
   description: >
     Psychosoziale Beratung bei kleineren oder größeren Problemen, bis hin zu
     scheinbar ausweglosen Situationen. Das Ziel ist immer Hilfe zur Selbsthilfe,
@@ -67,7 +67,7 @@ beratung:
   image: /img/flavor_wheel.jpg
 coaching:
   title: Coaching
-  subtitle: Führungskräfte, Mitarbeiter, Teams und Gruppen
+  subtitle: Führungskräfte, Mitarbeiter:innen, Teams und Gruppen
   description: Coaching, als eine besondere Form der Beratung für
     Mitarbeiter:innen, Führungskräfte und Manager:innen zur Optimierung ihrer
     professionellen Rolle, Aufgabe und Zielerreichung.
